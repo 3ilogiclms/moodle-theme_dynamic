@@ -39,3 +39,4 @@ $string['tagline'] = 'Tagline';
 $string['taglinedesc'] = 'The content from this textarea will be displayed under the Site logo on the Homepage';
 $string['usergreeting'] = 'Hi {$a}!';
 $string['welcome'] = 'Welcome, {$a}';
+$string['defaulttagline'] = 'eLearning Portal';
