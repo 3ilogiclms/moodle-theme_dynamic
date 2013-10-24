@@ -657,7 +657,7 @@ cursor:pointer;}
 
 .gettheselogs:hover
  { background-color:#666666; width:65px; color:#FFFFFF; padding:0px; height:23px; font-family:"Times New Roman"; font-weight:bold;}
-
+.coursebox .content .summary, .coursebox .content .coursecat {width : 100%;}
 /* Dynamic Theme Specific settings for Administrators to customise css.
 ---------------------------*/
 [[setting:customcss]]
