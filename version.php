@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -19,12 +20,14 @@
  *
  * @package    theme
  * @subpackage splash
- * @copyright � 2012 - 2013 | 3i Logic Innovations Co.(Pvt) Ltd. All Rights Reserved.
+ * @author Talha Noor, Azmat Ullah
+ * @copyright � 2012 - 2013 | 3i Logic (Pvt) Ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2013060702; // The current module version (Date: YYYYMMDDXX)
-$plugin->requires  = 2010112400; // Requires this Moodle version
-$plugin->release = '2.3';
+$plugin->version = 2014081104; // The current module version (Date: YYYYMMDDXX)
+$plugin->requires = 2010112400; // Requires this Moodle version
+$plugin->release = '2.4';
 $plugin->component = 'theme_dynamic'; // Full name of the plugin (used for diagnostics)
+$plugin->maturity = MATURITY_STABLE;
