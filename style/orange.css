@@ -59,7 +59,7 @@ body.dynamic-orange {                /* Define margins and background colour/ima
 
 /* Custom Menu
 -----------------------*/
- .dynamic-orange #custommenu .yui3-menu-content ul.first-of-type li{
+.dynamic-orange #custommenu .yui3-menu-content ul.first-of-type li{
     border-right: 1px solid #dbcfc0;
 }
 
