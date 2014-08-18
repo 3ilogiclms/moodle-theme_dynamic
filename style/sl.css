@@ -6,21 +6,227 @@
 **
 *********************************************************/
 
+@media (max-width:320px) {
+    #page #page-header {
+        background: url([[pix:theme|pageheader320]]) no-repeat scroll right top / 100% 100% rgba(0, 0, 0, 0);
+    }
+}
+
+@media (max-width:479px) {
+    #page-header #logobox img {max-width:182px;}
+
+    .userprofile .profilepicture {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    #page #page-header {
+        background: url([[pix:theme|pageheader320]]) no-repeat scroll right top / 100% 100% rgba(0, 0, 0, 0);
+    }
+
+}
+
+@media (max-width:480px) {
+    #page #page-header {
+        background: url([[pix:theme|pageheader480]]) no-repeat scroll right top / 100% 100% rgba(0, 0, 0, 0);
+    }
+}
+
+@media (max-width:600px) {
+    #page #page-header {
+        background: url([[pix:theme|pageheader600]]) no-repeat scroll right top / 100% 100% rgba(0, 0, 0, 0);
+    }
+}
+
+@media (max-width:768px) {
+    #page #page-header {
+        background: url([[pix:theme|pageheader768]]) no-repeat scroll right top / 100% 100% rgba(0, 0, 0, 0);
+    }
+}
+
+@media (max-width:800px) {
+    #page #page-header {
+        background: url([[pix:theme|pageheader800]]) no-repeat scroll right top / 100% 100% rgba(0, 0, 0, 0);
+    }
+}
+
+@media (max-width:720px) {
+    #page #page-header {
+        background: url([[pix:theme|pageheader720]]) no-repeat scroll right top / 100% 100% rgba(0, 0, 0, 0);
+    }
+    /* login page */
+    .loginbox.twocolumns .loginpanel {
+        border-right: 0px solid;
+        border-bottom: 1px solid;
+        float: left;
+        margin: 0 0 15px 0;
+        padding: 0;
+        width: 100%;
+        height:auto
+    }
+    .loginbox .loginpanel .subcontent {width:auto;}
+    .loginbox.twocolumns .signuppanel {
+        float: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        width: 100%;
+    }
+    /* login page end */
+
+    .side-pre-only #page-content #region-post-box {
+        margin-left: 0;
+    }
+
+    #page-content #region-post-box {
+        float: left;
+        left: 0;
+        margin-left: 0;
+        position: relative;
+        width: 100%;
+    }
+
+    /**/
+    .side-pre-only #page-content #region-main {
+        margin-left: 0;
+    }
+
+    /**/
+
+    #page-content #region-main-box {
+        left: 0;
+        float: left;
+        position: relative;
+        width: 100%;
+    }
+    /**/
+    #page-content #region-main-wrap {
+        float: none;
+        position: relative;
+        right: 0;
+        width: 96%;
+        padding: 0 2%;
+    }
+
+    /**/
+    #page-content #region-pre {
+        width: 96%;
+        float: left;
+        padding:0 2%;
+        margin-left: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /*set boudary by remove padding*/
+    .side-pre-only #page-content #region-main-box #region-post-box #region-main-wrap #region-main {
+        padding: 0;
+    }
+
+    /*block header*/
+    #region-post-box .block-region .block .header {
+        background-image: none;
+        background-color: #5B0F01;
+        color: #FFFFFF;
+        height: 25px;
+    }
+
+    /*login */
+    #page-header #headermenu {
+        float: right;
+        font-size: 0.9em;
+        height: auto;
+        margin: 20px 0 0;
+        padding: 5px;
+        position: relative;
+        text-align: right;
+        width: auto;
+    }
+
+    /*menu and navigation*/
+
+    #dropdownmenu {
+        height: auto;
+        margin: 0;
+        padding-top: 0;
+    }
+
+    #custommenu {
+        font-size: 1.2em;
+        height: auto;
+        margin-top: 0 !important;
+        padding-left: 0;
+        padding-top: 0 !important;
+    }
+    /*course page -- 3 columns */
+    #page-content #region-post {
+        padding-bottom: 0;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 0;
+        width: 96%;
+    }
+
+    #page-content #region-main {
+        margin-left: 0;
+        padding-bottom: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 0;
+    }
+
+    #page-content #region-pre {
+        left: 0px;
+    }
+
+}
+@media screen and (max-width:960px) {
+
+    body #page {
+        width:100%;
+        margin: auto;
+        padding-bottom:10px;
+    }
+    #page {
+        width:100%;
+        margin: auto;
+        padding-bottom:10px;
+    }
+
+    #page-header {
+        background: url([[pix:theme|pageheaderbgred]]) no-repeat scroll right top / 100% 100% rgba(0, 0, 0, 0);
+        color: #FFFFFF;
+        float: none;
+        height: 308px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #page-content {
+        clear: both;
+        float: left;
+        min-width: 320px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+}
+.descriptionbox {display:table-cell;}
+
+.coursebox .content .summary, .coursebox .content .coursecat {width:100%;}
+body #page-footer {height:auto;}
+
 .pagelayout-report #page {
-	width:960px;
+    width:960px;
 }
 
 
 #page-footer .logininfo {
-	padding:0px;
+    padding:0px;
 }
 
-#custommenu div.yui3-menu.custom_menu_submenu .yui3-menu-content a:hover {	
-    color: #fff;
-	background-color:#468068;
-}
-
-
+.loginbox.twocolumns .loginpanel {border:none;}
 
 /* Global 
 ------------------------*/
@@ -146,7 +352,7 @@ a:active {
     margin-right: 10px;
     width: auto;
     height: 60px;
-	color:#000000;
+    color:#000000;
 }
 
 #userdetails a:link { /* styling user detail links when logged in*/
@@ -169,7 +375,7 @@ a:active {
 
 #userdetails_loggedout h1{ /* positioning of user h1 tag*/ 
     padding-top:0px;
-	color:#000000;
+    color:#000000;
 }
 
 #userdetails_loggedout a:link { /* styling user detail links when logged out*/
@@ -258,8 +464,8 @@ a:active {
     font-size: 30px;
     font-weight: 800;
     margin-top: 40px;
-	padding-top:50px;
-	padding-left:20px;
+    padding-top:50px;
+    padding-left:20px;
 }
 
 #logobox img {
@@ -274,11 +480,14 @@ a:active {
 }
 
 #logobox h4{
-    padding-top:20px;
-    margin:0;
-    text-align: center;
+    color: #FFFFFF;
     font-size: 0.9em;
-    color: #666;
+    margin-bottom: 0;
+    margin-left: 22px;
+    margin-right: 0;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: left;
 }
 
 /* Custom Menu
@@ -306,16 +515,16 @@ a:active {
 #custommenu a:link, #custommenu a:visited { 
     text-decoration:none;
     color: #333333;
-	padding:0px 20px 0px 20px;
+    padding:0px 20px 0px 20px;
 }
 
 #custommenu a:active, #custommenu a:hover { 
     text-decoration:none;
     color: #5B0F01;
     background: none;
-	padding:0px 20px 0px 20px;
-	cursor:pointer;
-	
+    padding:0px 20px 0px 20px;
+    cursor:pointer;
+
 }
 
 #custommenu .yui3-menu-content ul.first-of-type li {
@@ -326,7 +535,7 @@ a:active {
     background:#6d1523;
     border:0px solid #fff;
     color: #fff;
-	margin-left:20px;
+    margin-left:0px;
 }
 
 #custommenu div.yui3-menu.custom_menu_submenu .yui3-menu-content a {
@@ -345,6 +554,7 @@ a:active {
     background-color: #605f5f;
 }
 
+#page-admin-index h2 {padding: 0 0 0 10px;}
 /* Breadcrumb Navbar
 -----------------------*/
 
@@ -370,7 +580,7 @@ a:active {
 #page {        /* Defining fluid or fixed theme.. for fluid theme change width to 100%*/
     width:1000px;
     margin: auto;
-	padding-bottom:10px;
+    padding-bottom:10px;
 }
 
 #page-content {    /* setting white background holder for all content under header*/
@@ -464,15 +674,15 @@ div.summary {
 .block-region .block .header h2{  /*-- right block text --*/
     color: #ffffff;
     padding:0 0 0 10px;
-	font-family:"Bell MT";
+    font-family:"Bell MT";
 }
 
 .block-region .block .content {  /*-- right block content   --*/
     /*background:  #f2f2f2;*/
-	border-radius:2px;
-	border:#CCCCCC solid 2px;
+    border-radius:2px;
+    border:#CCCCCC solid 2px;
     padding: 4px 5px 5px;
-	color:#999999;
+    color:#999999;
 }
 
 .block .title h2 {        /* Settings for h2 tags in sideblock headers */
@@ -652,12 +862,8 @@ a:hover
 }
 
 .gettheselogs
- { background-color:#5B0F01; width:65px; color:#FFFFFF; padding:0px; height:23px; font-family:"Times New Roman"; font-weight:bold;
-cursor:pointer;}
+{ background-color:#5B0F01; width:65px; color:#FFFFFF; padding:0px; height:23px; font-family:"Times New Roman"; font-weight:bold;
+  cursor:pointer;}
 
 .gettheselogs:hover
- { background-color:#666666; width:65px; color:#FFFFFF; padding:0px; height:23px; font-family:"Times New Roman"; font-weight:bold;}
-.coursebox .content .summary, .coursebox .content .coursecat {width : 100%;}
-/* Dynamic Theme Specific settings for Administrators to customise css.
----------------------------*/
-[[setting:customcss]]
+{ background-color:#666666; width:65px; color:#FFFFFF; padding:0px; height:23px; font-family:"Times New Roman"; font-weight:bold;}
