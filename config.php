@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -18,10 +19,9 @@
  * Config for the dynamic theme
  *
  * @package   theme_dynamic
- * @copyright © 2012 - 2013 | 3i Logic Innovations Co.(Pvt) Ltd. All Rights Reserved.
+ * @copyright ï¿½ 2012 - 2013 | 3i Logic (Pvt) Ltd.
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
 $THEME->name = 'dynamic';
 
 ////////////////////////////////////////////////////
@@ -33,6 +33,16 @@ $THEME->parents = array(
     'canvas',
     'base',
 );
+
+// Which existing theme(s) in the /theme/ directory
+// do you want this theme to extend. A theme can
+// extend any number of themes. Rather than
+// creating an entirely new theme and copying all
+// of the CSS, you can simply create a new theme,
+// extend the theme you like and just add the
+// changes you want to your theme.
+
+$THEME->sheets = array('core', 'settings');
 
 /////////////////////////////////////////////////////
 // List exsisting theme(s) to use as parents.
@@ -115,20 +125,20 @@ $THEME->layouts = array(
     'popup' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>true, 'noblocks'=>true),
+        'options' => array('nofooter' => true, 'nonavbar' => true, 'noblocks' => true),
     ),
     // No blocks and minimal footer - used for legacy frame layouts only!
     'frametop' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter', 'noblocks'=>true),
+        'options' => array('nofooter', 'noblocks' => true),
     ),
     // Embeded pages, like iframe embeded in moodleform
     'embedded' => array(
         'theme' => 'canvas',
         'file' => 'embedded.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>true),
+        'options' => array('nofooter' => true, 'nonavbar' => true),
     ),
     // Used during upgrade and install, and for the 'This site is undergoing maintenance' message.
     // This must not have any blocks, and it is good idea if it does not have links to
@@ -136,13 +146,13 @@ $THEME->layouts = array(
     'maintenance' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>true, 'noblocks'=>true),
+        'options' => array('nofooter' => true, 'nonavbar' => true, 'noblocks' => true),
     ),
     // Should display the content and basic headers only.
     'print' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>false, 'noblocks'=>true),
+        'options' => array('nofooter' => true, 'nonavbar' => false, 'noblocks' => true),
     ),
     'report' => array(
         'file' => 'general.php',
