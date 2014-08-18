@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -18,10 +19,10 @@
  * Strings for component 'theme_dynamic', language 'en'
  *
  * @package   theme_dynamic
- * @copyright � 2012 - 2013 | 3i Logic Innovations Co.(Pvt) Ltd. All Rights Reserved.
+ * @copyright � 2012 - 2013 | 3i Logic (Pvt) Ltd.
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot"><h2>Dynamic</h2><img src="dynamic/pix/screenshot.jpg" /><h3>Theme Discussion Forum:</h3><p><a href="http://moodle.org/mod/forum/view.php?id=46">http://moodle.org/mod/forum/view.php?id=46</a></p><h3>Theme Documentation:</h3><p><a href="https://github.com/3ilogiclms/moodle-theme-dynamic-/wiki">https://github.com/3ilogiclms/moodle-theme-dynamic-/wiki</a></p><h3>Report a bug:</h3><p><a href="https://github.com/3ilogiclms/moodle-theme-dynamic-/issues">https://github.com/3ilogiclms/moodle-theme-dynamic-/issues</a></p></div><div class="theme_description"><h2>About</h2><p>Dynamic is a fluid-width, three-column theme for Moodle 2.x.It also includes basic settings page allowing you to change your logo, tag line with option to hide tagline, footer text and custom CSS option.<h2>Tweaks</h2><p>This theme is built upon both Base and Canvas, two parent themes included in the Moodle core. If you want to modify this theme, we recommend that you first duplicate it then rename it before making your changes. This will prevent your customized theme from being overwritten by future Moodle upgrades, and you will still have the original files if you make a mess. More information on modifying themes can be found in the <a href="http://docs.moodle.org/en/Theme">MoodleDocs</a>.</p><h2>Credits</h2><p>This theme is based on Moodle Splash theme and it is further customized by 3i Logic.</p></div></div>';
+$string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot"><h2>Dynamic</h2><img src="dynamic/pix/screenshot.jpg" /><h3>Theme Documentation:</h3><p><a href="https://github.com/3ilogiclms/moodle-theme_dynamic/wiki">https://github.com/3ilogiclms/moodle-theme_dynamic/wiki</a></p><h3>Report a bug:</h3><p><a href="https://github.com/3ilogiclms/moodle-theme_dynamic/issues">https://github.com/3ilogiclms/moodle-theme_dynamic/issues</a></p></div><div class="theme_description"><h2>About</h2><p>Dynamic is a fluid-width, three-column theme for Moodle 2.x.It also includes basic settings page allowing you to change your logo, tag line with option to hide tagline, footer text and custom CSS option.<h2>Tweaks</h2><p>This theme is built upon both Base and Canvas, two parent themes included in the Moodle core. If you want to modify this theme, we recommend that you first duplicate it then rename it before making your changes. This will prevent your customized theme from being overwritten by future Moodle upgrades, and you will still have the original files if you make a mess. More information on modifying themes can be found in the <a href="http://docs.moodle.org/en/Theme">MoodleDocs</a>.</p><h2>Credits</h2><p>This theme is based on Moodle Splash theme and it is further customized by 3i Logic.</p></div></div>';
 $string['configtitle'] = 'Dynamic Theme Settings';
 $string['customcss'] = 'Custom CSS';
 $string['customcssdesc'] = 'Any CSS you enter here will be added to every page allowing your to easily customise this theme.';
@@ -40,3 +41,19 @@ $string['taglinedesc'] = 'The content from this textarea will be displayed under
 $string['usergreeting'] = 'Hi {$a}!';
 $string['welcome'] = 'Welcome, {$a}';
 $string['defaulttagline'] = 'eLearning Portal';
+$string['linkcolor'] = 'Link Color';
+$string['linkcolordesc'] = 'This sets the link color for the theme.';
+$string['blockheadercolor'] = 'Block Header Font Color';
+$string['blockheadercolordesc'] = 'This sets the font color of the block header.';
+$string['blockheaderbg'] = 'Block Header Background';
+$string['blockheaderbgdesc'] = 'This sets the background color for the theme.';
+$string['menubg'] = 'Menu Background';
+$string['menubgdesc'] = 'This sets the background of menu for the theme.';
+$string['menulinkhover'] = 'Menu Link Hover';
+$string['menulinkhoverdesc'] = 'This sets the background of menu link hover for the theme.';
+$string['menucolor'] = 'Menu Link';
+$string['menucolordesc'] = 'This sets the font color of menu for the theme.';
+$string['menucolorhover'] = 'Menu Link Hover Color';
+$string['menucolorhoverdesc'] = 'This sets the font color of menu on link hover.';
+$string['footerbg'] = 'Footer Background';
+$string['footerbgdesc'] = 'This sets the footer background.';
