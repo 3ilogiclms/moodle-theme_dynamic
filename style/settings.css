@@ -1,1 +1,52 @@
-// New Css file
+@charset "utf-8";
+/* CSS Document */
+a {
+    color:[[setting:linkcolor]];
+}
+
+.block .title h2 {
+    color:[[setting:blockheadercolor]];
+    background:[[setting:blockheaderbg]];
+    padding:0px;
+}
+
+#custommenu {
+    /*background:[[setting:menubg]];
+    */}
+
+.yui3-skin-sam #page .yui3-menu-label, .yui3-skin-sam #page .yui3-menuitem-content {
+    color:[[setting:menucolor]];
+}
+
+.yui3-skin-sam #page .yui3-menu-label, .yui3-skin-sam #page .yui3-menuitem-content:hover {
+    background:[[setting:menulinkhover]];
+    color:[[setting:menucolorhover]];
+}
+
+#custommenu #custom_menu_1  .yui3-menu-content li:hover {
+    background:[[setting:menulinkhover]];
+    color:[[setting:menucolorhover]];
+}
+
+#custommenu div.yui3-menu.custom_menu_submenu .yui3-menu-content:hover {	
+    color: [[setting:menucolorhover]];/*#fff*/
+    background-color:[[setting:menulinkhover]];/*#468068;*/
+}
+
+#custommenu #custom_menu_1  .yui3-menu-content li a:hover {
+    background:[[setting:menulinkhover]];
+    color:[[setting:menucolorhover]];
+}
+
+#custommenu div.yui3-menu.custom_menu_submenu .yui3-menu-content a:hover {	
+    color: [[setting:menucolorhover]];/*#fff*/
+    background-color:[[setting:menulinkhover]];/*#468068;*/
+}
+
+
+#page-footer {
+    background:[[setting:footerbg]];
+}
+
+/** Custom CSS **/
+[[setting:customcss]]
