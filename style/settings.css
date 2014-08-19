@@ -10,41 +10,50 @@ a {
     padding:0px;
 }
 
+/*block header*/
+#region-post-box .block-region .block .header {
+    color:[[setting:blockheadercolor]];
+    background:[[setting:blockheaderbg]];
+    padding:0px;
+}
+/*-- right block content   --*/
+.block-region .block .content {
+    border-radius:2px;
+    border:[[setting:blockbordercolor]] solid 2px;
+}
+
+a:link {        /* Defining all link styles*/
+    color:[[setting:linkcolor]];
+}
+
+a:visited {        /* Setting all visited link styles */
+    color:[[setting:linkcolor]];
+}
+
+a:hover {        /* Setting all rollover link styles */
+    color:[[setting:linkhovercolor]];
+}
+
+a:active {        /* Setting all active link styles */
+    color:[[setting:linkcolor]];
+}
+
 #custommenu {
     /*background:[[setting:menubg]];
     */}
 
-.yui3-skin-sam #page .yui3-menu-label, .yui3-skin-sam #page .yui3-menuitem-content {
+#custommenu div.yui3-menu.custom_menu_submenu .yui3-menu-content a, #custommenu #custom_menu_1  .yui3-menu-content li a, #custommenu div.yui3-menu.custom_menu_submenu .yui3-menu-content, #custommenu #custom_menu_1  .yui3-menu-content li, .yui3-skin-sam #page .yui3-menu-label, .yui3-skin-sam #page .yui3-menuitem-content {
     color:[[setting:menucolor]];
+    background:#fff;
 }
 
-.yui3-skin-sam #page .yui3-menu-label, .yui3-skin-sam #page .yui3-menuitem-content:hover {
-    background:[[setting:menulinkhover]];
-    color:[[setting:menucolorhover]];
-}
-
-#custommenu #custom_menu_1  .yui3-menu-content li:hover {
-    background:[[setting:menulinkhover]];
-    color:[[setting:menucolorhover]];
-}
-
-#custommenu div.yui3-menu.custom_menu_submenu .yui3-menu-content:hover {	
+#custommenu div.yui3-menu.custom_menu_submenu .yui3-menu-content a:hover, #custommenu #custom_menu_1  .yui3-menu-content li a:hover, #custommenu div.yui3-menu.custom_menu_submenu .yui3-menu-content:hover, #custommenu #custom_menu_1  .yui3-menu-content li:hover, .yui3-skin-sam #page .yui3-menu-label, .yui3-skin-sam #page .yui3-menuitem-content:hover {	
     color: [[setting:menucolorhover]];/*#fff*/
-    background-color:[[setting:menulinkhover]];/*#468068;*/
-}
-
-#custommenu #custom_menu_1  .yui3-menu-content li a:hover {
-    background:[[setting:menulinkhover]];
-    color:[[setting:menucolorhover]];
-}
-
-#custommenu div.yui3-menu.custom_menu_submenu .yui3-menu-content a:hover {	
-    color: [[setting:menucolorhover]];/*#fff*/
-    background-color:[[setting:menulinkhover]];/*#468068;*/
+    background:[[setting:menulinkhover]];/*#468068;*/
 }
 
 
-#page-footer {
+body #page-footer {
     background:[[setting:footerbg]];
 }
 
