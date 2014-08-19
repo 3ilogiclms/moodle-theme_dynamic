@@ -2,7 +2,7 @@
 **
 ** Theme name: Dynamic
 ** Creation Date: 07/06/13
-** Author: 3i Logic Training & Consultancy (PVT.) LTD.
+** Author: 3i Logic (PVT.) LTD.
 **
 *********************************************************/
 
@@ -123,14 +123,6 @@
         padding: 0;
     }
 
-    /*block header*/
-    #region-post-box .block-region .block .header {
-        background-image: none;
-        background-color: #5B0F01;
-        color: #FFFFFF;
-        height: 25px;
-    }
-
     /*login */
     #page-header #headermenu {
         float: right;
@@ -245,22 +237,6 @@ body {                /* Define margins and background colour/image */
 
 body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {   /* Set fonttype for site */ 
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-a:link {        /* Defining all link styles*/
-    color: #999999;
-}
-
-a:visited {        /* Setting all visited link styles */
-    color: #999999;
-}
-
-a:hover {        /* Setting all rollover link styles */
-    color: #5B0F01;
-}
-
-a:active {        /* Setting all active link styles */
-    color: #999999;
 }
 
 a img {        /* Image borders*/
@@ -500,12 +476,12 @@ a:active {
 }
 
 #custommenu {   /* setting font colour and removing borders */
-    padding-left: 6px;
+    padding-left: 0px;
     height: 33px;
     font-size: 1.2em;
     margin-top: 0px !important;
     padding-top: 0px !important;
-
+    margin:0px 8px;
 }
 
 #custommenu * { 
@@ -678,9 +654,6 @@ div.summary {
 }
 
 .block-region .block .content {  /*-- right block content   --*/
-    /*background:  #f2f2f2;*/
-    border-radius:2px;
-    border:#CCCCCC solid 2px;
     padding: 4px 5px 5px;
     color:#999999;
 }
