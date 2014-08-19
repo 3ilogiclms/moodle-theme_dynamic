@@ -50,6 +50,7 @@ $THEME->sheets = array('core', 'settings');
 
 
 $THEME->sheets = array(
+    'settings',
     'sl',
     'green',
     'blue',
