@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -18,7 +17,7 @@
 /**
  * Theme version info
  *
- * @package    theme
+ * @package    dynamic
  * @subpackage splash
  * @author Talha Noor, Azmat Ullah
  * @copyright � 2012 - 2013 | 3i Logic (Pvt) Ltd.
@@ -26,8 +25,8 @@
  */
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version = 2014081104; // The current module version (Date: YYYYMMDDXX)
-$plugin->requires = 2010112400; // Requires this Moodle version
-$plugin->release = '2.4';
+$plugin->version   = 2015012003; // The current module version (Date: YYYYMMDDXX)
+$plugin->requires  = 2010112400; // Requires this Moodle version
+$plugin->release = '2.7';
 $plugin->component = 'theme_dynamic'; // Full name of the plugin (used for diagnostics)
-$plugin->maturity = MATURITY_STABLE;
+$plugin->maturity = MATURITY_ALPHA;
