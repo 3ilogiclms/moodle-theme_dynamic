@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -14,7 +13,6 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
  * Library functions for the Dynamic theme
  *
@@ -31,6 +29,12 @@
  */
 function dynamic_process_css($css, $theme) {
 
+    if (!empty($theme->settings->logo)) {
+
+    } else {
+        $theme->settings->logo = 'abc.png';
+    }
+
     if (!empty($theme->settings->regionwidth)) {
         $regionwidth = $theme->settings->regionwidth;
     } else {
@@ -44,17 +48,21 @@ function dynamic_process_css($css, $theme) {
         $customcss = null;
     }
     $css = dynamic_set_customcss($css, $customcss);
-
-    // Set the link color
+    // Set the link color.
     if (!empty($theme->settings->linkcolor)) {
         $linkcolor = $theme->settings->linkcolor;
     } else {
         $linkcolor = null;
     }
     $css = dynamic_set_linkcolor($css, $linkcolor);
-
-
-    // Set the blockheadercolor
+    // Set the link hover color.
+    if (!empty($theme->settings->linkhovercolor)) {
+        $linkhovercolor = $theme->settings->linkhovercolor;
+    } else {
+        $linkhovercolor = '#754620';
+    }
+    $css = dynamic_set_linkhovercolor($css, $linkhovercolor);
+    // Set the blockheadercolor.
     if (!empty($theme->settings->blockheadercolor)) {
         $blockheadercolor = $theme->settings->blockheadercolor;
     } else {
@@ -62,31 +70,30 @@ function dynamic_process_css($css, $theme) {
     }
     $css = dynamic_set_blockheadercolor($css, $blockheadercolor);
 
-    // Set the blockheaderbg
+    // Set the blockheaderbg.
     if (!empty($theme->settings->blockheaderbg)) {
         $blockheaderbg = $theme->settings->blockheaderbg;
     } else {
         $blockheaderbg = null;
     }
     $css = dynamic_set_blockheaderbg($css, $blockheaderbg);
-
-    // Set the menubg
-    if (!empty($theme->settings->menubg)) {
-        $menubg = $theme->settings->menubg;
+    // Set the blockbordercolor.
+    if (!empty($theme->settings->blockbordercolor)) {
+        $blockbordercolor = $theme->settings->blockbordercolor;
     } else {
-        $menubg = null;
+        $blockbordercolor = null;
     }
-    $css = dynamic_set_menubg($css, $menubg);
+    $css = dynamic_set_blockbordercolor($css, $blockbordercolor);
 
-    // Set the menubg
+    // Set the menulinkhover.
     if (!empty($theme->settings->menulinkhover)) {
         $menulinkhover = $theme->settings->menulinkhover;
     } else {
-        $menulinkhover = null;
+        $menulinkhover = '#754620';
     }
     $css = dynamic_set_menulinkhover($css, $menulinkhover);
 
-    // Set the menubg
+    // Set the menucolor.
     if (!empty($theme->settings->menucolor)) {
         $menucolor = $theme->settings->menucolor;
     } else {
@@ -94,8 +101,7 @@ function dynamic_process_css($css, $theme) {
     }
     $css = dynamic_set_menucolor($css, $menucolor);
 
-
-    // Set the menucolorhover
+    // Set the menucolorhover.
     if (!empty($theme->settings->menucolorhover)) {
         $menucolorhover = $theme->settings->menucolorhover;
     } else {
@@ -110,7 +116,6 @@ function dynamic_process_css($css, $theme) {
         $footerbg = null;
     }
     $css = dynamic_set_footerbg($css, $footerbg);
-
     return $css;
 }
 
@@ -160,7 +165,7 @@ function dynamic_set_customcss($css, $customcss) {
  * The colour switcher is a YUI moodle module that is located in
  *     theme/dynamic/yui/dynamic/dynamic.js
  *
- * @param moodle_page $page 
+ * @param moodle_page $page
  */
 function dynamic_initialise_colourswitcher(moodle_page $page) {
     user_preference_allow_ajax_update('theme_dynamic_chosen_colour', PARAM_ALPHA);
@@ -200,7 +205,21 @@ function dynamic_set_linkcolor($css, $linkcolor) {
     $tag = '[[setting:linkcolor]]';
     $replacement = $linkcolor;
     if (is_null($replacement)) {
-        $replacement = '#2d83d5';
+        $replacement = '#999999';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the link hover color variable in CSS
+ *
+ */
+function dynamic_set_linkhovercolor($css, $linkhovercolor) {
+    $tag = '[[setting:linkhovercolor]]';
+    $replacement = $linkhovercolor;
+    if (is_null($replacement)) {
+        $replacement = '#754620';
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -214,7 +233,7 @@ function dynamic_set_footerbg($css, $footerbg) {
     $tag = '[[setting:footerbg]]';
     $replacement = $footerbg;
     if (is_null($replacement)) {
-        $replacement = '#5b0f01';
+        $replacement = '#754620';
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -249,14 +268,14 @@ function dynamic_set_blockheaderbg($css, $blockheaderbg) {
 }
 
 /**
- * Sets the font color of block header variable in CSS
+ * Sets the font color of block border variable in CSS
  *
  */
-function dynamic_set_menubg($css, $menubg) {
-    $tag = '[[setting:menubg]]';
-    $replacement = $menubg;
+function dynamic_set_blockbordercolor($css, $blockbordercolor) {
+    $tag = '[[setting:blockbordercolor]]';
+    $replacement = $blockbordercolor;
     if (is_null($replacement)) {
-        $replacement = '#000000';
+        $replacement = '#CCCCCC';
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -270,7 +289,7 @@ function dynamic_set_menulinkhover($css, $menulinkhover) {
     $tag = '[[setting:menulinkhover]]';
     $replacement = $menulinkhover;
     if (is_null($replacement)) {
-        $replacement = '#5b0f01';
+        $replacement = '#754620';
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -296,10 +315,35 @@ function dynamic_set_menucolor($css, $menucolor) {
  */
 function dynamic_set_menucolorhover($css, $menucolorhover) {
     $tag = '[[setting:menucolorhover]]';
-    $replacement = $menucolor;
+    $replacement = $menucolorhover;
     if (is_null($replacement)) {
-        $replacement = '#000000';
+        $replacement = '#ffffff';
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
+}
+
+/**
+ * Serves any files associated with the theme settings.
+ *
+ * @param stdClass $course
+ * @param stdClass $cm
+ * @param context $context
+ * @param string $filearea
+ * @param array $args
+ * @param bool $forcedownload
+ * @param array $options
+ * @return bool
+ */
+function theme_dynamic_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo')) {
+        $theme = theme_config::load('dynamic');
+        // By default, theme files must be cache-able by both browsers and proxies.
+        if (!array_key_exists('cacheability', $options)) {
+            $options['cacheability'] = 'public';
+        }
+        return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
+    } else {
+        send_file_not_found();
+    }
 }
