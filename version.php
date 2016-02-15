@@ -13,20 +13,18 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
  * Theme version info
  *
- * @package    dynamic
+ * @package    theme
  * @subpackage splash
- * @author Talha Noor, Azmat Ullah
+ * @author Talha Noor, Azmat Ullah, Atif Azad
  * @copyright � 2012 - 2013 | 3i Logic (Pvt) Ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die;
-
-$plugin->version   = 2015012003; // The current module version (Date: YYYYMMDDXX)
-$plugin->requires  = 2010112400; // Requires this Moodle version
-$plugin->release = '2.7';
-$plugin->component = 'theme_dynamic'; // Full name of the plugin (used for diagnostics)
-$plugin->maturity = MATURITY_ALPHA;
+$plugin->version = 2015012003; // The current module version (Date: YYYYMMDDXX.
+$plugin->requires = 2010112400; // Requires this Moodle version.
+$plugin->release = '2.9';
+$plugin->component = 'theme_dynamic'; // Full name of the plugin (used for diagnostics).
+$plugin->maturity = MATURITY_STABLE;

@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -14,7 +13,6 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
  * Config for the dynamic theme
  *
@@ -23,17 +21,12 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 $THEME->name = 'dynamic';
-
-////////////////////////////////////////////////////
 // Name of the theme.
-////////////////////////////////////////////////////
-
 
 $THEME->parents = array(
     'canvas',
     'base',
 );
-
 // Which existing theme(s) in the /theme/ directory
 // do you want this theme to extend. A theme can
 // extend any number of themes. Rather than
@@ -41,34 +34,22 @@ $THEME->parents = array(
 // of the CSS, you can simply create a new theme,
 // extend the theme you like and just add the
 // changes you want to your theme.
-
 $THEME->sheets = array('core', 'settings');
-
-/////////////////////////////////////////////////////
 // List exsisting theme(s) to use as parents.
-////////////////////////////////////////////////////
-
 
 $THEME->sheets = array(
     'settings',
+    'bootstrap',
     'sl',
     'green',
     'blue',
     'orange',
     'ie',
 );
-
-////////////////////////////////////////////////////
 // Name of the stylesheet(s) you are including in
 // this new theme's /styles/ directory.
-////////////////////////////////////////////////////
-
 $THEME->enable_dock = true;
-
-////////////////////////////////////////////////////
 // Do you want to use the new navigation dock?
-////////////////////////////////////////////////////
-
 
 $THEME->layouts = array(
     // Most pages - if we encounter an unknown or a missing page type, this one is used.
@@ -81,13 +62,13 @@ $THEME->layouts = array(
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-post'
     ),
-    // Course page
+    // Course page.
     'course' => array(
         'file' => 'general.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-post'
     ),
-    // Course page
+    // Course page.
     'coursecategory' => array(
         'file' => 'general.php',
         'regions' => array('side-pre', 'side-post'),
@@ -119,7 +100,7 @@ $THEME->layouts = array(
         'defaultregion' => 'side-post'
     ),
     'login' => array(
-        'file' => 'general.php',
+        'file' => 'login.php',
         'regions' => array()
     ),
     // Pages that appear in pop-up windows - no navigation, no blocks, no header.
@@ -142,8 +123,8 @@ $THEME->layouts = array(
         'options' => array('nofooter' => true, 'nonavbar' => true),
     ),
     // Used during upgrade and install, and for the 'This site is undergoing maintenance' message.
-    // This must not have any blocks, and it is good idea if it does not have links to
-    // other places - for example there should not be a home link in the footer...
+    // This must not have any blocks, and it is good idea if it does not have links to.
+    // other places - for example there should not be a home link in the footer.
     'maintenance' => array(
         'file' => 'general.php',
         'regions' => array(),
@@ -163,18 +144,13 @@ $THEME->layouts = array(
 );
 
 
-///////////////////////////////////////////////////////////////
 // These are all of the possible layouts in Moodle.
-///////////////////////////////////////////////////////////////
 
 
 $THEME->csspostprocess = 'dynamic_process_css';
 
 
-
-///////////////////////////////////////////////////////////////
 // Dynamic Theme Specific settings for Administrators to customise
 // css.
-///////////////////////////////////////////////////////////////
 
 $THEME->editor_sheets = array('editor');

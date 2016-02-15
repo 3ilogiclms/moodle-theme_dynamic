@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -14,7 +13,6 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
  * Settings for the dynamic theme
  *
@@ -23,31 +21,30 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die;
-
 if ($ADMIN->fulltree) {
+// Logo file setting.
 
-// Logo file setting
-    $name = 'theme_dynamic/logo';
+	$name = 'theme_dynamic/logo';
     $title = get_string('logo', 'theme_dynamic');
     $description = get_string('logodesc', 'theme_dynamic');
-    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo');
+    $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
-// Tagline setting
+
+// Tagline setting.
     $name = 'theme_dynamic/tagline';
     $title = get_string('tagline', 'theme_dynamic');
     $description = get_string('taglinedesc', 'theme_dynamic');
     $setting = new admin_setting_configtextarea($name, $title, $description, get_string('defaulttagline', 'theme_dynamic'));
     $settings->add($setting);
-
     $name = 'theme_dynamic/hide_tagline';
     $title = get_string('hide_tagline', 'theme_dynamic');
     $description = get_string('hide_taglinedesc', 'theme_dynamic');
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
     $settings->add($setting);
-
     /*
-      // Block region width
+      // Block region width.
       $name = 'theme_dynamic/regionwidth';
       $title = get_string('regionwidth','theme_dynamic');
       $description = get_string('regionwidthdesc', 'theme_dynamic');
@@ -56,25 +53,31 @@ if ($ADMIN->fulltree) {
       $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
       $temp->add($setting); */
 
-// Foot note setting
+// Foot note setting.
     $name = 'theme_dynamic/footnote';
     $title = get_string('footnote', 'theme_dynamic');
     $description = get_string('footnotedesc', 'theme_dynamic');
     $setting = new admin_setting_confightmleditor($name, $title, $description, '');
     $settings->add($setting);
-
-// Custom CSS file
+// Custom CSS file.
     $name = 'theme_dynamic/customcss';
     $title = get_string('customcss', 'theme_dynamic');
     $description = get_string('customcssdesc', 'theme_dynamic');
     $setting = new admin_setting_configtextarea($name, $title, $description, '');
     $settings->add($setting);
-
     // Link color setting.
     $name = 'theme_dynamic/linkcolor';
     $title = get_string('linkcolor', 'theme_dynamic');
     $description = get_string('linkcolordesc', 'theme_dynamic');
-    $default = '#2d83d5';
+    $default = '#999999';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
+    // Link color: hover setting.
+    $name = 'theme_dynamic/linkhovercolor';
+    $title = get_string('linkhovercolor', 'theme_dynamic');
+    $description = get_string('linkhovercolordesc', 'theme_dynamic');
+    $default = '#605f5f';
     $previewconfig = null;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
     $settings->add($setting);
@@ -96,12 +99,11 @@ if ($ADMIN->fulltree) {
     $previewconfig = null;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
     $settings->add($setting);
-
     // Menu Background.
-    $name = 'theme_dynamic/menubg';
-    $title = get_string('menubg', 'theme_dynamic');
-    $description = get_string('menubgdesc', 'theme_dynamic');
-    $default = '#000000';
+    $name = 'theme_dynamic/blockbordercolor';
+    $title = get_string('blockbordercolor', 'theme_dynamic');
+    $description = get_string('blockbordercolordesc', 'theme_dynamic');
+    $default = '#CCCCCC';
     $previewconfig = null;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
     $settings->add($setting);
@@ -110,7 +112,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_dynamic/menulinkhover';
     $title = get_string('menulinkhover', 'theme_dynamic');
     $description = get_string('menulinkhoverdesc', 'theme_dynamic');
-    $default = '#5b0f01';
+    $default = '#605f5f';
     $previewconfig = null;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
     $settings->add($setting);
@@ -123,7 +125,6 @@ if ($ADMIN->fulltree) {
     $previewconfig = null;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
     $settings->add($setting);
-
     // Block Header Fonts setting.
     $name = 'theme_dynamic/blockheadercolor';
     $title = get_string('blockheadercolor', 'theme_dynamic');

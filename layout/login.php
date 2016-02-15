@@ -54,13 +54,13 @@ echo $OUTPUT->doctype()
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 <header>
     <?php if ($hasheading || $hasnavbar) { ?>
-     <div class="slide-banner">
-    <div id="page-header" >
-        <div id="page-header-wrapper" class="wrapper clearfix">
-         <?php if ($hasheading) { ?>
-        <div id="headermenu">
-         <div class="container zero-padding">
-                    <?php
+    <div class="slide-banner">
+        <div id="page-header" >
+            <div id="page-header-wrapper" class="wrapper clearfix">
+                <?php if ($hasheading) { ?>
+                <div id="headermenu">
+                    <div class="container zero-padding">
+                        <?php
                                 if (isloggedin()) {
                                     echo html_writer::start_tag('div', array('id' => 'userdetails'));
                                     echo html_writer::start_tag('p', array('class' => 'prolog'));
@@ -76,116 +76,77 @@ echo $OUTPUT->doctype()
                                     ;
                                 }
                                 ?>
-
-                    <?php echo $OUTPUT->lang_menu(); }?>
-                    </div>
-                     </div>
-            <div class="container zero-padding">
-            <?php if ($hasheading) { ?>
-                
-
-
-                <div id="logobox">
-                    <?php
+                        <?php echo $OUTPUT->lang_menu(); }?> </div>
+                </div>
+                <div class="container zero-padding">
+                    <?php if ($hasheading) { ?>
+                    <div id="logobox">
+                        <?php
                                 if ($haslogo) {
                                     //echo html_writer::link(new moodle_url('/'), "<img src='" . (!empty($PAGE->theme->setting_file_url('logo', 'logo'))) . "' alt='logo' />");
 									?>
-									<a href="<?php echo $CFG->wwwroot; ?>">
-							<img alt="Logo" src="<?php echo $PAGE->theme->setting_file_url('logo', 'logo') ?>">
-						</a>
-									<?php
+                        <a href="<?php echo $CFG->wwwroot; ?>"> <img alt="Logo" src="<?php echo $PAGE->theme->setting_file_url('logo', 'logo') ?>"> </a>
+                        <?php
                                 } else {
                                     ?>
-                                    <a href="<?php echo $CFG->wwwroot; ?>">
-							<img src="<?php echo $OUTPUT->pix_url('logo', 'theme'); ?>" alt="Logo" />
-						</a>
-                                    <?php
+                        <a href="<?php echo $CFG->wwwroot; ?>"> <img src="<?php echo $OUTPUT->pix_url('logo', 'theme'); ?>" alt="Logo" /> </a>
+                        <?php
                                 }
                                 ?>
-                    <?php if (!$hidetagline) { ?>
-                    <h4><?php echo $tagline ?></h4>
+                        <?php if (!$hidetagline) { ?>
+                        <h4><?php echo $tagline ?></h4>
+                        <?php } ?>
+                    </div>
+                    <div class="clearer"></div>
+                    <?php if ($haslogo) { ?>
+                    <h4 class="headermain inside">&nbsp;</h4>
+                    <?php } else { ?>
+                    <h4 class="headermain inside">&nbsp;</h4>
                     <?php } ?>
-                </div>
-                <div class="clearer"></div>
-                <?php if ($haslogo) { ?>
-                <h4 class="headermain inside">&nbsp;</h4>
-                <?php } else { ?>
-                <h4 class="headermain inside">&nbsp;</h4>
-                <?php } ?>
-                <?php } // End of if ($hasheading)?>
-
-                <!-- DROP DOWN MENU -->
-
-                <div id="dropdownmenu">
-                    <?php if ($hascustommenu) { ?>
-                    <div id="custommenu"><?php echo $custommenu; ?></div>
-                    <?php } ?>
-                    <div class="navbar">
-                        <div class="wrapper clearfix">
-                            <div class="breadcrumb">
-                                <?php if ($hasnavbar) echo $OUTPUT->navbar(); ?>
+                    <?php } // End of if ($hasheading)?>
+                    
+                    <!-- DROP DOWN MENU -->
+                    
+                    <div id="dropdownmenu">
+                        <?php if ($hascustommenu) { ?>
+                        <div id="custommenu"><?php echo $custommenu; ?></div>
+                        <?php } ?>
+                        <div class="navbar">
+                            <div class="wrapper clearfix">
+                                <div class="breadcrumb">
+                                    <?php if ($hasnavbar) echo $OUTPUT->navbar(); ?>
+                                </div>
+                                <div class="navbutton"> <?php echo $PAGE->button; ?></div>
                             </div>
-                            <div class="navbutton"> <?php echo $PAGE->button; ?></div>
                         </div>
                     </div>
+                    <!-- END DROP DOWN MENU --> 
                 </div>
-                <!-- END DROP DOWN MENU -->
             </div>
         </div>
     </div>
-     </div>
     <?php } // if ($hasheading || $hasnavbar)  ?>
-    <!-- END OF HEADER -->
+    <!-- END OF HEADER --> 
 </header>
-<div id="page">
-
+<div id="page"> 
+    
     <!-- START OF CONTENT -->
     <div id="page-content" class="container">
         <div id="region-main-box">
             <div id="region-post-box">
-               
-                    <?php if ($hassidepre) { ?>
-                     <div class="col-md-2 zero-padding">
-                    <div id="region-pre" class="block-region">
-                        <div class="region-content"> <?php echo $OUTPUT->blocks_for_region('side-pre') ?> </div>
-                    </div>
-                    
-                </div>
-                <?php } ?>
-                <div class="
-                <?php 
-					if (!$hassidepost || !$hassidepost) {  
-                			echo "col-md-10";
-						}
-					else if (!$hassidepost && !$hassidepost)	{
-							echo "col-md-12";
-						}
-					else {
-							echo "col-md-8";
-						}
-                ?>
-                ">
+                <div class="col-md-12">
                     <div id="region-main-wrap">
                         <div id="region-main">
                             <div class="region-content"> <?php echo core_renderer::MAIN_CONTENT_TOKEN ?> </div>
                         </div>
                     </div>
                 </div>
-               
-                    <?php if ($hassidepost) { ?>
-                     <div class="col-md-2 zero-padding">
-                    <div id="region-post" class="block-region">
-                        <div class="region-content"> <?php echo $OUTPUT->blocks_for_region('side-post') ?> </div>
-                    </div>
-                    </div>
-                    <?php } ?>
-                
             </div>
         </div>
     </div>
     <!-- END OF CONTENT -->
     <div class="clearfix">&nbsp;</div>
-    <!-- END OF #Page -->
+    <!-- END OF #Page --> 
 </div>
 <!-- START OF FOOTER -->
 
