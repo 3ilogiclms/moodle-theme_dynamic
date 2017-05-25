@@ -13,18 +13,35 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 /**
- * Theme version info
+ * The embedded layout for the Canvas theme.
  *
- * @package    theme
- * @subpackage splash
- * @author Talha Noor, Azmat Ullah, Atif Azad
- * @copyright (c) 2012 - 2017 | 3i Logic (Pvt) Ltd.
+ * @package    theme_dynamic
+ * @copyright  2010 Patrick Malley
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-defined('MOODLE_INTERNAL') || die;
-$plugin->version = 2017051500; // The current module version (Date: YYYYMMDDXX)
-$plugin->requires = 2016070700; // Requires this Moodle version
-$plugin->release = '3.2';
-$plugin->component = 'theme_dynamic'; // Full name of the plugin (used for diagnostics).
-$plugin->maturity = MATURITY_STABLE;
+
+echo $OUTPUT->doctype() ?>
+<html <?php echo $OUTPUT->htmlattributes() ?>>
+<head>
+    <title><?php echo $PAGE->title ?></title>
+    <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
+    <?php echo $OUTPUT->standard_head_html() ?>
+</head>
+<body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses) ?>">
+<?php echo $OUTPUT->standard_top_of_body_html() ?>
+
+<div id="page">
+
+<!-- END OF HEADER -->
+
+    <div id="page-content" class="clearfix">
+        <?php echo $OUTPUT->main_content() ?>
+    </div>
+
+<!-- START OF FOOTER -->
+</div>
+<?php echo $OUTPUT->standard_end_of_body_html() ?>
+</body>
+</html>

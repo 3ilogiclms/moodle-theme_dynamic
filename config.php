@@ -23,10 +23,9 @@
 $THEME->name = 'dynamic';
 // Name of the theme.
 
-$THEME->parents = array(
-    'canvas',
-    'base',
-);
+//$THEME->parents = array('clean', 'bootstrapbase');
+
+$THEME->parents = array( 'clean',  'bootstrapbase' );
 // Which existing theme(s) in the /theme/ directory
 // do you want this theme to extend. A theme can
 // extend any number of themes. Rather than
@@ -38,6 +37,34 @@ $THEME->sheets = array('core', 'settings');
 // List exsisting theme(s) to use as parents.
 
 $THEME->sheets = array(
+    'baseadmin',
+    'baseautocomplete',
+    'baseblocks',
+    'basecalendar',
+    'basecore',
+    'basecourse',
+    'basedock',
+    'baseeditor',
+    'basefilemanager',
+    'basegrade',
+    'basemessage',
+    'basepagelayout',
+    'basequestion',
+    'basesearch',
+    'basetabs',
+    'basetemplates',
+    'baseuser',
+    'canvasadmin',
+    'canvasblocks',
+    'canvascore',
+    'canvascourse',
+    'canvaseditor',
+    'canvasmods',
+    'canvaspagelayout',
+    'canvaspopups',
+    'canvastables',
+    'canvastabs',
+    'canvastext',
     'settings',
     'bootstrap',
     'sl',
@@ -52,6 +79,25 @@ $THEME->enable_dock = true;
 // Do you want to use the new navigation dock?
 
 $THEME->layouts = array(
+    // The pagelayout used when a redirection is occuring.
+    'redirect' => array(
+        'file' => 'embedded.php',
+        'regions' => array(),
+        'options' => array('nofooter'=>true, 'nonavbar'=>true, 'nocourseheaderfooter'=>true),
+    ),
+    'report' => array(
+        'file' => 'general.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+    ),
+    // The pagelayout used for safebrowser and securewindow.
+    'secure' => array(
+        'file' => 'general.php',
+        'regions' => array('side-pre', 'side-post'),
+        'defaultregion' => 'side-pre',
+        'options' => array('nofooter'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologinlinks'=>true, 'nocourseheaderfooter'=>true),
+    ),
+
     // Most pages - if we encounter an unknown or a missing page type, this one is used.
     'base' => array(
         'file' => 'general.php',
@@ -81,8 +127,8 @@ $THEME->layouts = array(
     ),
     'frontpage' => array(
         'file' => 'general.php',
-        'regions' => array('side-pre', 'side-post'),
-        'defaultregion' => 'side-post'
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre'
     ),
     'admin' => array(
         'file' => 'general.php',
@@ -117,7 +163,7 @@ $THEME->layouts = array(
     ),
     // Embeded pages, like iframe embeded in moodleform
     'embedded' => array(
-        'theme' => 'canvas',
+       // 'theme' => 'canvas',
         'file' => 'embedded.php',
         'regions' => array(),
         'options' => array('nofooter' => true, 'nonavbar' => true),
@@ -136,19 +182,11 @@ $THEME->layouts = array(
         'regions' => array(),
         'options' => array('nofooter' => true, 'nonavbar' => false, 'noblocks' => true),
     ),
-    'report' => array(
-        'file' => 'general.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre'
-    ),
+
 );
 
-
-// These are all of the possible layouts in Moodle.
-
-
+$THEME->enable_dock = true;
 $THEME->csspostprocess = 'dynamic_process_css';
-
 
 // Dynamic Theme Specific settings for Administrators to customise
 // css.

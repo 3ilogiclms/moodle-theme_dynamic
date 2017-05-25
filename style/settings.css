@@ -1,5 +1,86 @@
 @charset "utf-8";
 /* CSS Document */
+
+ul#location_tree_item_group{
+	width:100% !important;
+}
+
+ul#competencies_tree_item_group{
+	width:100% !important;
+}
+
+ul#gradereports_tree_item_group{
+	width:100% !important;
+}
+
+ul#grades_tree_item_group{
+	width:100% !important;
+}
+
+ul#backups_tree_item_group{
+	width:100% !important;
+}
+
+ul#roles_tree_item_group{
+	width:100% !important;
+}
+
+ul#accounts_tree_item_group{
+	width:100% !important;
+}
+
+ul#courses_tree_item_group{
+	width:100% !important;
+}
+
+span.filler{
+	margin:auto !important;
+}
+
+ul#action-menu-0-menu.menu.align-tr-br img.icon{
+	height: 24px;
+    width: 20px;
+}
+
+a.float-left img.icon{	
+	border-radius: 5px;
+    background: #CCC;
+    padding: 0px;
+}
+
+@media (max-width: 1600px) and (min-width: 1200px) {
+#course-category-listings.columns-3 #course-listing {
+    width: 50%;
+    margin: 0px;
+}
+
+div#category-listing.grid-col-5-12.grid-col.span5.col-md-5 {
+	border: 1px solid #CCC !important;
+    padding: 0px !important;	
+}
+
+div#course-listing.grid-col-7-12.grid-col.span7.col-md-7 {
+	margin-left:25px !important;
+	border: 1px solid #CCC !important;
+    padding: 0px !important;	
+}
+
+div#course-listing.grid-col-7-12.grid-col.span7.col-md-7 h3#course-listing-title {
+	border-left:1px solid #CCC !important;
+}
+
+div.content-item-body{
+	text-align:left !important;
+}
+
+div.content-item {
+	text-align:left !important;
+}
+
+#logobox h4 {
+	display:none !important;
+}
+
 body {
 	border-top:5px solid #000;	
 	}
