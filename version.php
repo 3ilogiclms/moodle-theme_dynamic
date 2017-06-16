@@ -19,12 +19,12 @@
  * @package    theme
  * @subpackage splash
  * @author Talha Noor, Azmat Ullah, Atif Azad
- * @copyright (c) 2012 - 2017 | 3i Logic (Pvt) Ltd.
+ * @copyright � 2012 - 2013 | 3i Logic (Pvt) Ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die;
-$plugin->version = 2017051500; // The current module version (Date: YYYYMMDDXX)
-$plugin->requires = 2016070700; // Requires this Moodle version
-$plugin->release = '3.2';
+$plugin->version = 2015012003; // The current module version (Date: YYYYMMDDXX.
+$plugin->requires = 2010112400; // Requires this Moodle version.
+$plugin->release = '2.9';
 $plugin->component = 'theme_dynamic'; // Full name of the plugin (used for diagnostics).
 $plugin->maturity = MATURITY_STABLE;
